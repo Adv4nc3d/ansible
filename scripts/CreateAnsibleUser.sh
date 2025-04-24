@@ -2,7 +2,6 @@
 # CreateAnsibleUser.sh
 # Creates a new user with rsa2048 certificate called 'ansible'
 
-
 # Setup error pipeline
 set -euo pipefail
 
