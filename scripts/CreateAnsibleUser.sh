@@ -5,8 +5,15 @@
 # Setup error pipeline
 set -euo pipefail
 
+# Set usage for 'username'
+USAGE="Usage: $0 <username>"
+if [[ $# -ne 1 ]]; then
+  echo "$USAGE"
+  exit 1
+fi
+
 # Globals
-USERNAME="ansible"
+USERNAME="$1"
 KEY_TYPE="rsa"
 KEY_BITS=2048
 HOME_DIR="/home/${USERNAME}"
