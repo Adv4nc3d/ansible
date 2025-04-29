@@ -49,7 +49,7 @@ chmod 600 "${SSH_DIR}/${KEY_NAME}"
 chmod 644 "${SSH_DIR}/${KEY_NAME}.pub"
 chown "${USERNAME}:${USERNAME}" "${SSH_DIR}/${KEY_NAME}" "${SSH_DIR}/${KEY_NAME}.pub"
 
-# Abschlussmeldung
+# Final message
 cat <<EOF
 ✅ Ready: '${USERNAME}' is able to login with the generated ssh-key now.
    Generated Keytype: RSA ${KEY_BITS}
