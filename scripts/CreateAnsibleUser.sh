@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # CreateAnsibleUser.sh
-# Creates a new user with rsa2048 certificate called 'ansible'
+# Creates a new user with rsa2048 certificate
 
 # Setup error pipeline
 set -euo pipefail
@@ -20,7 +20,7 @@ HOME_DIR="/home/${USERNAME}"
 SSH_DIR="${HOME_DIR}/.ssh"
 KEY_NAME="${USERNAME}_rsa2048"
 
-# Create user 'ansible' and disable password login
+# Create user and disable password login
 if id "${USERNAME}" &>/dev/null; then
   echo "Error: ${USERNAME} exists already."
 else
